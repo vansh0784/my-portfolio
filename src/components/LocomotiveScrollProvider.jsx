@@ -17,7 +17,7 @@ const LocomotiveScrollProvider = ({ children }) => {
     });
 
     return () => {
-      locoScroll.destroy(); // Cleanup on unmount
+      locoScroll.destroy();
     };
   }, []);
 
