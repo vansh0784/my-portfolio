@@ -17,7 +17,7 @@ const CustomCursor = () => {
   return (
     <motion.img
       src={cursor}
-      className="fixed w-6 h-6 pointer-events-none mix-blend-difference z-100"
+      className="fixed w-6 h-6 pointer-events-none  mix-blend-difference z-100"
       style={{
         left: position.x,
         top: position.y,

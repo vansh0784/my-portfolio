@@ -53,7 +53,7 @@ const Skills = () => {
         custom={1}
         >
           <h1 className='text-3xl text-gray-600 font-bold w-[50%] '>FRONTEND</h1>
-          <div className='flex items-start justify-end w-[50%] flex-wrap gap-5 px-10'>
+          <div className='flex items-center justify-center w-[50%] flex-wrap gap-5 px-10'>
               <div className='flex items-center justify-center mr-4'>
                 <img src={html} alt="HTML"  className='w-12' />
                 <h1 className="text-xl font-semibold text-gray-600">HTML</h1>

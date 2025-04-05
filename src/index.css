@@ -4,6 +4,7 @@
 }
 
 
+
 @import "tailwindcss";
 
 @theme{
@@ -29,3 +30,6 @@
   .custom-scrollbar {
     -ms-overflow-style: none;
   }
+.my{
+  background-color: red;
+}
