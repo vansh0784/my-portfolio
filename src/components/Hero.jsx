@@ -23,20 +23,16 @@ const Hero = () => {
             />
           </h3>
           <h1
-            className={`font-bold text-5xl ${
-              theme === "dark" ? "text-gray-200" : "text-gray-900"
-            }`}
+            className={`font-bold text-5xl ${theme==="dark"?"text-gray-400":"text-gray-700"}`}
           >
             Vansh Singh
           </h1>
           <h1
-            className={`font-bold text-5xl my-6 ${
-              theme === "dark" ? "text-gray-400" : "text-gray-800"
-            }`}
+            className={`font-bold text-5xl my-6 ${theme==="dark"?"text-gray-400":"text-gray-700"}`}
           >
             Bringing designs to life with code.
           </h1>
-          <p className="font-semibold text-md my-6 w-[50%] text-gray-600">
+          <p className="font-semibold text-md my-6 max-w-[50%] text-gray-600">
             Crafting seamless, intuitive, and high-performance web experiences.
             As a frontend developer & MERN stack enthusiast, I bring ideas to
             life with clean code and modern design, making the web more

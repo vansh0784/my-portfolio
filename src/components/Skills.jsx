@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import html from "../assets/pg-lang/html.png"
 import css from "../assets/pg-lang/css.png";
 import js from "../assets/pg-lang/js.png"
@@ -17,6 +17,7 @@ import githubicon from "../assets/pg-lang/newgithub.png";
 import redux from "../assets/pg-lang/redux.png"
 import { motion } from 'framer-motion'
 import { BsFlower3 } from 'react-icons/bs'
+import { ThemeContext } from '../context/ThemeContext';
 
 
 const fadeInVariants = {
@@ -29,6 +30,7 @@ const fadeInVariants = {
 };
 
 const Skills = () => {
+  const {theme}=useContext(ThemeContext);
   return (
     <>
     <div id="skills" className=' flex flex-col  justify-center items-start px-4 py-2 mt-[10%] gap-8 border-b-gray-700'>
@@ -41,7 +43,7 @@ const Skills = () => {
         variants={fadeInVariants}
         >
           <BsFlower3/></motion.span>
-        <p className='text-gray-600 text-left text-2xl font-bold'>MY STACK</p>
+        <p className={` ${theme==="dark"?"text-gray-400":"text-gray-700"} text-left text-2xl font-bold`}>MY STACK</p>
       </div>
       <div className='flex flex-col items-center justify-between gap-8 px-4 py-2' id="animate-div"
       >
@@ -164,5 +166,4 @@ const Skills = () => {
     </>
   )
 }
-
 export default Skills
