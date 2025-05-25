@@ -3,7 +3,6 @@ import { ThemeContext } from "../context/ThemeContext";
 import { motion } from "framer-motion";
 import { GoSun } from "react-icons/go";
 import { IoMoonOutline } from "react-icons/io5";
-import { Link } from "react-router-dom";
 const NavBar = () => {
   const [activeButton, setActiveButton] = useState(null);
   const { theme, toggleTheme } = useContext(ThemeContext);
@@ -19,7 +18,7 @@ const NavBar = () => {
   };
 
   return (
-    <div className="fixed top-[3%] left-[13%] w-9/12 z-50 opacity-95">
+    <div className="fixed top-[3%] left-[13%] w-9/12 z-50 opacity-90">
       <motion.div
 
         key={theme}
@@ -56,7 +55,7 @@ const NavBar = () => {
               Skills
             </button>
             <button >
-              Resume
+              <a href="https://drive.google.com/file/d/1QuIOTOanJDIaBnTpkPzDwJDEIYE9EAmR/view">Resume</a>
             </button>
             <button className="cursor-pointer text-xl p-1" onClick={toggleTheme}>
               {theme === "dark" ? <GoSun /> : <IoMoonOutline />}
