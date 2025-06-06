@@ -10,8 +10,8 @@ const Contact = () => {
   const inputStyle = `border px-4 py-3 rounded-3xl outline-none w-64 transition-all
     ${
       theme === "dark"
-        ? "border-gray-600 bg-black text-white placeholder-gray-400"
-        : "border-gray-300 bg-white text-gray-900 placeholder-gray-600"
+        ? "border-gray-600 bg-black text-[#F9F6EE] placeholder-gray-400"
+        : "border-gray-300 bg-white text-[#555555] placeholder-gray-600"
     }
   `;
 
@@ -23,20 +23,18 @@ const Contact = () => {
     <>
       <div
         id="contact"
-        className={`flex items-center justify-between mt-10 flex-col my-6 ${
-          theme === "dark" ? "bg-black" : "bg-white"
-        }`}
+        className={`flex items-center justify-between mt-10 flex-col my-6 `}
       >
         <h1
           className={`font-bold text-3xl mt-3 ${
-            theme === "dark" ? "text-white" : "text-gray-800"
+            theme === "dark" ? "text-[#F9F6EE]" : "text-[#555555]"
           }`}
         >
           Get in Touch
         </h1>
         <p
           className={`font-semibold text-lg mt-2 ${
-            theme === "dark" ? "text-gray-300" : "text-gray-500"
+            theme === "dark" ? "text-[#F9F6EE]" : "text-[#555555]"
           }`}
         >
           Contact me
@@ -47,7 +45,7 @@ const Contact = () => {
             <p className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent text-3xl font-extrabold">
             No need to hesitate, just initiate!
             </p>
-            <p className="max-w-md text-md text-gray-700 font-bold">
+            <p className="max-w-md text-md text-[#F9F6EE]-700 font-bold">
               I'm always excited to explore new opportunities and connect with
               like-minded individuals. Whether you have a question, a project in
               mind, or just want to say hello, feel free to reach out!
@@ -85,8 +83,8 @@ const Contact = () => {
               className={`flex items-center justify-center gap-2 px-4 py-3 rounded-3xl font-semibold cursor-pointer transition-all
               ${
                 theme === "dark"
-                  ? "bg-gray-700 text-white hover:bg-gray-600"
-                  : "bg-gray-900 text-white hover:bg-gray-800"
+                  ? "bg-gray-700 text-[#F9F6EE] hover:bg-gray-600"
+                  : "bg-gray-900 text-[#555555] hover:bg-gray-800"
               }`}
             >
               <span>Send</span> <FaTelegramPlane />
@@ -99,8 +97,8 @@ const Contact = () => {
         className={`border-t text-center flex flex-col items-center justify-center py-6 gap-4
         ${
           theme === "dark"
-            ? "border-gray-400 bg-black text-gray-400"
-            : "border-gray-400 bg-white text-gray-900"
+            ? "border-gray-400 text-[#F9F6EE]"
+            : "border-gray-400 text-[#555555]"
         }`}
       >
         <div className="flex items-center justify-center gap-4">

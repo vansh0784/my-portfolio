@@ -36,7 +36,7 @@ const NavBar = () => {
       >
         <div
           className={`flex gap-8 rounded-3xl items-center justify-between px-4 py-3 cursor-pointer ${
-            theme === "dark" ? "bg-black text-white" : "bg-white text-gray-900"
+            theme === "dark" ? "bg-[#121212] text-[#F9F6EE]" : "bg-[#F9F6EE] text-[#555555] "
           }`}
         >
           <div className="">{`< vanshSingh />`}</div>

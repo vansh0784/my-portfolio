@@ -34,7 +34,7 @@ const Skills = () => {
   return (
     <>
     <div id="skills" className=' flex flex-col  justify-center items-start px-4 py-2 mt-[10%] gap-8 border-b-gray-700'>
-      <div className=' flex items-center justify-start gap-4 text-xl font-bold text-gray-600'>
+      <div className=' flex items-center justify-start gap-4 text-xl font-bold text-[#F9F6EE]-600'>
         <motion.span
         initial={{rotate:0}}
         animate={{rotate:360}}
@@ -43,7 +43,7 @@ const Skills = () => {
         variants={fadeInVariants}
         >
           <BsFlower3/></motion.span>
-        <p className={` ${theme==="dark"?"text-gray-400":"text-gray-700"} text-left text-2xl font-bold`}>MY STACK</p>
+        <p className={` ${theme==="dark"?"text-[#F9F6EE]-400":"text-[#F9F6EE]-700"} text-left text-2xl font-bold`}>MY STACK</p>
       </div>
       <div className='flex flex-col items-center justify-between gap-8 px-4 py-2' id="animate-div"
       >
@@ -54,43 +54,43 @@ const Skills = () => {
         viewport={{ once: false }}
         custom={1}
         >
-          <h1 className='text-3xl text-gray-600 font-bold w-[50%] '>FRONTEND</h1>
+          <h1 className='text-3xl text-[#F9F6EE]-600 font-bold w-[50%] '>FRONTEND</h1>
           <div className='flex items-center justify-center w-[50%] flex-wrap gap-5 px-10'>
               <div className='flex items-center justify-center mr-4'>
                 <img src={html} alt="HTML"  className='w-12' />
-                <h1 className="text-xl font-semibold text-gray-600">HTML</h1>
+                <h1 className="text-xl font-semibold text-[#F9F6EE]-600">HTML</h1>
               </div>
               <div className='flex items-center justify-center gap-3'>
                 <img src={css} alt="css"  className='w-12'/>
-                <h1 className="text-xl font-semibold text-gray-600">CSS</h1>
+                <h1 className="text-xl font-semibold text-[#F9F6EE]-600">CSS</h1>
               </div>
               <div className='flex items-center justify-center gap-3'>
                 <img src={js} alt=""  className='w-12'/>
-                <h1 className="text-xl font-semibold text-gray-600">JavaScript</h1>
+                <h1 className="text-xl font-semibold text-[#F9F6EE]-600">JavaScript</h1>
               </div>
               <div className='flex items-center justify-center gap-3'>
                 <img src={react} alt=""  className='w-12'/>
-                <h1 className="text-xl font-semibold text-gray-600">React</h1>
+                <h1 className="text-xl font-semibold text-[#F9F6EE]-600">React</h1>
               </div>
               <div className='flex items-center justify-center gap-3'>
                 <img src={redux} alt=""  className='w-12'/>
-                <h1 className="text-xl font-semibold text-gray-600">Redux</h1>
+                <h1 className="text-xl font-semibold text-[#F9F6EE]-600">Redux</h1>
               </div>
               <div className='flex items-center justify-center gap-3'>
                 <img src={types} alt=""  className='w-12'/>
-                <h1 className="text-xl font-semibold text-gray-600">Typescript</h1>
+                <h1 className="text-xl font-semibold text-[#F9F6EE]-600">Typescript</h1>
               </div>
               <div className='flex items-center justify-center gap-3'>
                 <img src={tailcss} alt="" className='w-12' />
-                <h1 className="text-xl font-semibold text-gray-600">Tailwind CSS</h1>
+                <h1 className="text-xl font-semibold text-[#F9F6EE]-600">Tailwind CSS</h1>
               </div>
               <div className='flex items-center justify-center gap-3'>
                 <img src={gsapicon} alt="" className='w-12'/>
-                <h1 className="text-xl font-semibold text-gray-600">GSAP</h1>
+                <h1 className="text-xl font-semibold text-[#F9F6EE]-600">GSAP</h1>
               </div>
               <div className='flex items-center justify-center gap-3'>
                 <img src={framer} alt="" className='w-12' />
-                <h1 className="text-xl font-semibold text-gray-600">Framer Motion</h1>
+                <h1 className="text-xl font-semibold text-[#F9F6EE]-600">Framer Motion</h1>
               </div>
 
           </div>
@@ -102,15 +102,15 @@ const Skills = () => {
         viewport={{ once: false }}
         custom={2}
          className='flex items-start justify-center border-b-gray-950 mb-8 w-full'>
-          <h1 className='text-3xl text-gray-600 font-bold w-[50%] '>BACKEND</h1>
+          <h1 className='text-3xl text-[#F9F6EE]-600 font-bold w-[50%] '>BACKEND</h1>
           <div className='flex justify-center items-start w-[50%] flex-wrap gap-5 px-10'>
               <div className='flex items-center justify-center gap-3'>
                 <img src={nodeicon} alt="HTML"  className='w-14' />
-                <h1 className="text-xl font-semibold text-gray-600">Node JS</h1>
+                <h1 className="text-xl font-semibold text-[#F9F6EE]-600">Node JS</h1>
               </div>
               <div className='flex items-center justify-center gap-3'>
                 <img src={expressicon} alt="css"  className='w-12'/>
-                <h1 className="text-xl font-semibold text-gray-600">Express JS</h1>
+                <h1 className="text-xl font-semibold text-[#F9F6EE]-600">Express JS</h1>
               </div>
 
           </div>
@@ -122,15 +122,15 @@ const Skills = () => {
         viewport={{ once: false }}
         custom={3}
         className='flex items-start justify-center border-b-gray-950 mb-8 w-full'>
-          <h1 className='text-3xl text-gray-600 font-bold w-[50%] '>DATABASE</h1>
+          <h1 className='text-3xl text-[#F9F6EE]-600 font-bold w-[50%] '>DATABASE</h1>
           <div className='flex justify-center items-start w-[50%] flex-wrap gap-5 px-10'>
               <div className='flex items-center justify-center gap-3'>
                 <img src={mysql} alt="HTML"  className='w-14' />
-                <h1 className="text-xl font-semibold text-gray-600">MySQL</h1>
+                <h1 className="text-xl font-semibold text-[#F9F6EE]-600">MySQL</h1>
               </div>
               <div className='flex items-center justify-center gap-3'>
                 <img src={mongo} alt="css"  className='w-12'/>
-                <h1 className="text-xl font-semibold text-gray-600">Mongo DB</h1>
+                <h1 className="text-xl font-semibold text-[#F9F6EE]-600">Mongo DB</h1>
               </div>
 
           </div>
@@ -142,19 +142,19 @@ const Skills = () => {
         viewport={{ once: false }}
         custom={4}
         className='flex items-start justify-center border-b-gray-950 mb-8 w-full'>
-          <h1 className='text-3xl text-gray-600 font-bold w-[50%] '>TOOLS</h1>
+          <h1 className='text-3xl text-[#F9F6EE]-600 font-bold w-[50%] '>TOOLS</h1>
           <div className='flex justify-center items-end w-[50%] flex-wrap gap-5 px-10'>
               <div className='flex items-center justify-center gap-3'>
                 <img src={npmicon} alt="HTML"  className='w-14' />
-                <h1 className="text-xl font-semibold text-gray-600">NPM</h1>
+                <h1 className="text-xl font-semibold text-[#F9F6EE]-600">NPM</h1>
               </div>
               <div className='flex items-center justify-center gap-3'>
                 <img src={giticon} alt="css"  className='w-12'/>
-                <h1 className="text-xl font-semibold text-gray-600">Git</h1>
+                <h1 className="text-xl font-semibold text-[#F9F6EE]-600">Git</h1>
               </div>
               <div className='flex items-center justify-center gap-3'>
                 <img src={githubicon} alt="css"  className='w-12'/>
-                <h1 className="text-xl font-semibold text-gray-600">Github</h1>
+                <h1 className="text-xl font-semibold text-[#F9F6EE]-600">Github</h1>
               </div>
 
           </div>

@@ -14,12 +14,12 @@
     cursor: none;
 }
 #light{
-    background-color:white;
-    color:black;
+    background-color:#F9F6EE;
+    color:#121212;
 }
 #dark{
-    background-color: black;
-    color: white;
+    background-color: #121212;
+    color: #F9F6EE;
 }
 .custom-scrollbar::-webkit-scrollbar {
     display: none;

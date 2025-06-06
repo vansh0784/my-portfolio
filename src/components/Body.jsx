@@ -23,7 +23,7 @@ const Body = () => {
   });
 
   return (
-    <div className="flex h-screen bg-white dark:bg-black text-black dark:text-white" id={theme}>
+    <div className="flex h-screen bg-white dark:bg-black text-black dark:text-[#F9F6EE]" id={theme}>
       <NavBar />
       <div className="w-1/12 h-full fixed left-0 top-0 flex flex-col justify-end items-center gap-8 cursor-pointer text-xl">
         <a href="https://wa.me/917428716307" className="px-2 py-1">
