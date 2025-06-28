@@ -7,7 +7,7 @@ import { SiLeetcode } from "react-icons/si";
 const Contact = () => {
   const { theme } = useContext(ThemeContext);
 
-  const inputStyle = `border px-4 py-3 rounded-3xl outline-none w-64 transition-all
+  const inputStyle = `border px-4 py-3 rounded-3xl outline-none w-full transition-all
     ${
       theme === "dark"
         ? "border-gray-600 bg-black text-[#F9F6EE] placeholder-gray-400"
@@ -23,36 +23,46 @@ const Contact = () => {
     <>
       <div
         id="contact"
-        className={`flex items-center justify-between mt-10 flex-col my-6 `}
+        className="flex flex-col items-center justify-between mt-10 mb-6 px-4 md:px-8 lg:px-16"
       >
         <h1
-          className={`font-bold text-3xl mt-3 ${
+          className={`font-bold text-2xl sm:text-3xl mt-3 ${
             theme === "dark" ? "text-[#F9F6EE]" : "text-[#555555]"
           }`}
         >
           Get in Touch
         </h1>
         <p
-          className={`font-semibold text-lg mt-2 ${
+          className={`font-semibold text-base sm:text-lg mt-2 ${
             theme === "dark" ? "text-[#F9F6EE]" : "text-[#555555]"
           }`}
         >
           Contact me
         </p>
 
-        <div className="flex justify-between items-start gap-10 mt-6 w-full">
-          <div className="flex flex-col gap-4">
-            <p className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent text-3xl font-extrabold">
-            No need to hesitate, just initiate!
+        {/* Responsive Wrapper */}
+        <div className="flex flex-col lg:flex-row items-start gap-10 mt-6 w-full">
+          {/* Text Section */}
+          <div className="flex flex-col gap-4 w-full lg:w-1/2">
+            <p className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent text-2xl sm:text-3xl font-extrabold">
+              No need to hesitate, just initiate!
             </p>
-            <p className="max-w-md text-md text-[#F9F6EE]-700 font-bold">
+            <p
+              className={`max-w-lg text-md font-bold ${
+                theme === "dark" ? "text-[#F9F6EE]" : "text-[#555555]"
+              }`}
+            >
               I'm always excited to explore new opportunities and connect with
               like-minded individuals. Whether you have a question, a project in
               mind, or just want to say hello, feel free to reach out!
             </p>
           </div>
 
-          <form onSubmit={handleSubmit} className="flex flex-col gap-6">
+          {/* Form Section */}
+          <form
+            onSubmit={handleSubmit}
+            className="flex flex-col gap-6 w-full lg:w-1/2"
+          >
             <label>
               <input
                 type="text"
@@ -84,7 +94,7 @@ const Contact = () => {
               ${
                 theme === "dark"
                   ? "bg-gray-700 text-[#F9F6EE] hover:bg-gray-600"
-                  : "bg-gray-900 text-[#555555] hover:bg-gray-800"
+                  : "bg-gray-900 text-[#F9F6EE] hover:bg-gray-800"
               }`}
             >
               <span>Send</span> <FaTelegramPlane />
@@ -93,8 +103,9 @@ const Contact = () => {
         </div>
       </div>
 
+      {/* Footer */}
       <footer
-        className={`border-t text-center flex flex-col items-center justify-center py-6 gap-4
+        className={`border-t text-center flex flex-col items-center justify-center py-6 gap-4 mt-8
         ${
           theme === "dark"
             ? "border-gray-400 text-[#F9F6EE]"

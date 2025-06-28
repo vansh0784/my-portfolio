@@ -29,141 +29,97 @@ const fadeInVariants = {
   })
 };
 
+// top: same imports
+
 const Skills = () => {
-  const {theme}=useContext(ThemeContext);
+  const { theme } = useContext(ThemeContext);
+
+  const textColor = theme === "dark" ? "text-[#F9F6EE]" : "text-[#333333]";
+
   return (
-    <>
-    <div id="skills" className=' flex flex-col  justify-center items-start px-4 py-2 mt-[10%] gap-8 border-b-gray-700'>
-      <div className=' flex items-center justify-start gap-4 text-xl font-bold text-[#F9F6EE]-600'>
+    <div id="skills" className="flex flex-col justify-center items-start px-4 py-2 mt-[10%] gap-8 border-b-gray-700">
+      {/* Header */}
+      <div className="flex items-center justify-start gap-4 text-xl font-bold">
         <motion.span
-        initial={{rotate:0}}
-        animate={{rotate:360}}
-        transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
-        style={{fontSize:"1.5em"}}
-        variants={fadeInVariants}
+          initial={{ rotate: 0 }}
+          animate={{ rotate: 360 }}
+          transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
+          style={{ fontSize: "1.5em" }}
         >
-          <BsFlower3/></motion.span>
-        <p className={` ${theme==="dark"?"text-[#F9F6EE]-400":"text-[#F9F6EE]-700"} text-left text-2xl font-bold`}>MY STACK</p>
-      </div>
-      <div className='flex flex-col items-center justify-between gap-8 px-4 py-2' id="animate-div"
-      >
-        <motion.div className='flex items-start justify-center border-b-gray-950 mb-8'
-        variants={fadeInVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: false }}
-        custom={1}
-        >
-          <h1 className='text-3xl text-[#F9F6EE]-600 font-bold w-[50%] '>FRONTEND</h1>
-          <div className='flex items-center justify-center w-[50%] flex-wrap gap-5 px-10'>
-              <div className='flex items-center justify-center mr-4'>
-                <img src={html} alt="HTML"  className='w-12' />
-                <h1 className="text-xl font-semibold text-[#F9F6EE]-600">HTML</h1>
-              </div>
-              <div className='flex items-center justify-center gap-3'>
-                <img src={css} alt="css"  className='w-12'/>
-                <h1 className="text-xl font-semibold text-[#F9F6EE]-600">CSS</h1>
-              </div>
-              <div className='flex items-center justify-center gap-3'>
-                <img src={js} alt=""  className='w-12'/>
-                <h1 className="text-xl font-semibold text-[#F9F6EE]-600">JavaScript</h1>
-              </div>
-              <div className='flex items-center justify-center gap-3'>
-                <img src={react} alt=""  className='w-12'/>
-                <h1 className="text-xl font-semibold text-[#F9F6EE]-600">React</h1>
-              </div>
-              <div className='flex items-center justify-center gap-3'>
-                <img src={redux} alt=""  className='w-12'/>
-                <h1 className="text-xl font-semibold text-[#F9F6EE]-600">Redux</h1>
-              </div>
-              <div className='flex items-center justify-center gap-3'>
-                <img src={types} alt=""  className='w-12'/>
-                <h1 className="text-xl font-semibold text-[#F9F6EE]-600">Typescript</h1>
-              </div>
-              <div className='flex items-center justify-center gap-3'>
-                <img src={tailcss} alt="" className='w-12' />
-                <h1 className="text-xl font-semibold text-[#F9F6EE]-600">Tailwind CSS</h1>
-              </div>
-              <div className='flex items-center justify-center gap-3'>
-                <img src={gsapicon} alt="" className='w-12'/>
-                <h1 className="text-xl font-semibold text-[#F9F6EE]-600">GSAP</h1>
-              </div>
-              <div className='flex items-center justify-center gap-3'>
-                <img src={framer} alt="" className='w-12' />
-                <h1 className="text-xl font-semibold text-[#F9F6EE]-600">Framer Motion</h1>
-              </div>
-
-          </div>
-        </motion.div>
-        <motion.div
-        variants={fadeInVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: false }}
-        custom={2}
-         className='flex items-start justify-center border-b-gray-950 mb-8 w-full'>
-          <h1 className='text-3xl text-[#F9F6EE]-600 font-bold w-[50%] '>BACKEND</h1>
-          <div className='flex justify-center items-start w-[50%] flex-wrap gap-5 px-10'>
-              <div className='flex items-center justify-center gap-3'>
-                <img src={nodeicon} alt="HTML"  className='w-14' />
-                <h1 className="text-xl font-semibold text-[#F9F6EE]-600">Node JS</h1>
-              </div>
-              <div className='flex items-center justify-center gap-3'>
-                <img src={expressicon} alt="css"  className='w-12'/>
-                <h1 className="text-xl font-semibold text-[#F9F6EE]-600">Express JS</h1>
-              </div>
-
-          </div>
-        </motion.div>
-        <motion.div
-        variants={fadeInVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: false }}
-        custom={3}
-        className='flex items-start justify-center border-b-gray-950 mb-8 w-full'>
-          <h1 className='text-3xl text-[#F9F6EE]-600 font-bold w-[50%] '>DATABASE</h1>
-          <div className='flex justify-center items-start w-[50%] flex-wrap gap-5 px-10'>
-              <div className='flex items-center justify-center gap-3'>
-                <img src={mysql} alt="HTML"  className='w-14' />
-                <h1 className="text-xl font-semibold text-[#F9F6EE]-600">MySQL</h1>
-              </div>
-              <div className='flex items-center justify-center gap-3'>
-                <img src={mongo} alt="css"  className='w-12'/>
-                <h1 className="text-xl font-semibold text-[#F9F6EE]-600">Mongo DB</h1>
-              </div>
-
-          </div>
-        </motion.div>
-        <motion.div
-        variants={fadeInVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: false }}
-        custom={4}
-        className='flex items-start justify-center border-b-gray-950 mb-8 w-full'>
-          <h1 className='text-3xl text-[#F9F6EE]-600 font-bold w-[50%] '>TOOLS</h1>
-          <div className='flex justify-center items-end w-[50%] flex-wrap gap-5 px-10'>
-              <div className='flex items-center justify-center gap-3'>
-                <img src={npmicon} alt="HTML"  className='w-14' />
-                <h1 className="text-xl font-semibold text-[#F9F6EE]-600">NPM</h1>
-              </div>
-              <div className='flex items-center justify-center gap-3'>
-                <img src={giticon} alt="css"  className='w-12'/>
-                <h1 className="text-xl font-semibold text-[#F9F6EE]-600">Git</h1>
-              </div>
-              <div className='flex items-center justify-center gap-3'>
-                <img src={githubicon} alt="css"  className='w-12'/>
-                <h1 className="text-xl font-semibold text-[#F9F6EE]-600">Github</h1>
-              </div>
-
-          </div>
-        </motion.div>
-
+          <BsFlower3 />
+        </motion.span>
+        <p className={`text-left text-2xl font-bold ${textColor}`}>MY STACK</p>
       </div>
 
+      {/* Skill Categories */}
+      <div className="flex flex-col gap-12 w-full px-4 py-2">
+
+        {/* Each section */}
+        {[
+          {
+            title: "FRONTEND",
+            items: [
+              { icon: html, name: "HTML" },
+              { icon: css, name: "CSS" },
+              { icon: js, name: "JavaScript" },
+              { icon: react, name: "React" },
+              { icon: redux, name: "Redux" },
+              { icon: types, name: "Typescript" },
+              { icon: tailcss, name: "Tailwind CSS" },
+              { icon: gsapicon, name: "GSAP" },
+              { icon: framer, name: "Framer Motion" },
+            ],
+            custom: 1,
+          },
+          {
+            title: "BACKEND",
+            items: [
+              { icon: nodeicon, name: "Node JS" },
+              { icon: expressicon, name: "Express JS" },
+            ],
+            custom: 2,
+          },
+          {
+            title: "DATABASE",
+            items: [
+              { icon: mysql, name: "MySQL" },
+              { icon: mongo, name: "Mongo DB" },
+            ],
+            custom: 3,
+          },
+          {
+            title: "TOOLS",
+            items: [
+              { icon: npmicon, name: "NPM" },
+              { icon: giticon, name: "Git" },
+              { icon: githubicon, name: "Github" },
+            ],
+            custom: 4,
+          },
+        ].map((section, idx) => (
+          <motion.div
+            key={section.title}
+            variants={fadeInVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false }}
+            custom={section.custom}
+            className="flex flex-col w-full gap-6"
+          >
+            <h1 className={`text-3xl font-bold ${textColor}`}>{section.title}</h1>
+            <div className="flex flex-wrap gap-6 items-center justify-start sm:justify-center">
+              {section.items.map((skill, i) => (
+                <div key={i} className="flex flex-col items-center justify-center gap-1">
+                  <img src={skill.icon} alt={skill.name} className="w-12 sm:w-14" />
+                  <p className={`text-md font-semibold ${textColor}`}>{skill.name}</p>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+        ))}
+      </div>
     </div>
-    </>
-  )
-}
-export default Skills
+  );
+};
+
+export default Skills;

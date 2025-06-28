@@ -25,7 +25,9 @@ const Body = () => {
   return (
     <div className="flex h-screen bg-white dark:bg-black text-black dark:text-[#F9F6EE]" id={theme}>
       <NavBar />
-      <div className="w-1/12 h-full fixed left-0 top-0 flex flex-col justify-end items-center gap-8 cursor-pointer text-xl">
+
+      {/* Socials (Left Sidebar) — Hide on mobile */}
+      <div className="hidden sm:flex w-1/12 h-full fixed left-0 top-0 flex-col justify-end items-center gap-8 cursor-pointer text-xl">
         <a href="https://wa.me/917428716307" className="px-2 py-1">
           <BsWhatsapp />
         </a>
@@ -40,14 +42,18 @@ const Body = () => {
         </a>
         <div className={`w-0.5 h-[20%] ${theme === "dark" ? "bg-gray-200" : "bg-gray-800"}`}></div>
       </div>
+
+      {/* Scrollable Content Area */}
       <div
         ref={scrollRef}
-        className="w-10/12 px-[5%] mx-auto h-full flex overflow-auto scrollbar-hidden custom-scrollbar pt-[80px]"
+        className="w-full sm:w-10/12 px-4 sm:px-[5%] mx-auto h-full flex overflow-auto scrollbar-hidden custom-scrollbar pt-[80px]"
       >
-        <div className="w-[97%]">
+        <div className="w-full">
           <Hero />
           <Contact />
         </div>
+
+        {/* Scroll Indicator (Right of content) */}
         <motion.div
           className={`w-[0.6em] fixed h-[8em] top-[50%] right-[8%] rounded-xl overflow-hidden ${
             theme === "dark" ? "bg-gray-700" : "bg-gray-300"
@@ -59,7 +65,9 @@ const Body = () => {
           />
         </motion.div>
       </div>
-      <div className="w-1/12 h-full flex flex-col justify-end items-center fixed right-0 top-0 gap-8">
+
+      {/* Email (Right Sidebar) — Hide on mobile */}
+      <div className="hidden sm:flex w-1/12 h-full flex-col justify-end items-center fixed right-0 top-0 gap-8">
         <a href="mailto:vanshsin784@gmail.com" className="rotate-90 mb-16">
           <p>vanshsin784@gmail.com</p>
         </a>
