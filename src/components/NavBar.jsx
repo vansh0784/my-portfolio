@@ -3,26 +3,23 @@ import { ThemeContext } from "../context/ThemeContext";
 import { motion } from "framer-motion";
 import { GoSun } from "react-icons/go";
 import { IoMoonOutline } from "react-icons/io5";
-import { FiMenu, FiX } from "react-icons/fi"; // Hamburger and Close icons
+import { FiMenu, FiX } from "react-icons/fi";
 
 const NavBar = () => {
   const [activeButton, setActiveButton] = useState(null);
   const [menuOpen, setMenuOpen] = useState(false);
   const { theme, toggleTheme } = useContext(ThemeContext);
 
-  const getButtonClass = (button) => {
-    return `px-2 py-1 transition text-md cursor-pointer ${
-      activeButton === button
-        ? "text-orange-500 hover:text-md"
-        : "border-transparent"
-    }`;
-  };
-
   const handleButtonClick = (button, id) => {
     setActiveButton(button);
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
-    setMenuOpen(false); // Close menu on mobile when clicked
+    setMenuOpen(false);
   };
+
+  const getButtonClass = (button) =>
+    `px-2 py-1 transition text-md cursor-pointer ${
+      activeButton === button ? "text-orange-500" : "text-inherit"
+    }`;
 
   const navItems = (
     <>
@@ -39,20 +36,20 @@ const NavBar = () => {
         Skills
       </button>
       <button>
-        <a href="https://drive.google.com/file/d/1QuIOTOanJDIaBnTpkPzDwJDEIYE9EAmR/view" target="_blank" rel="noopener noreferrer">
+        <a
+          href="https://drive.google.com/file/d/1QuIOTOanJDIaBnTpkPzDwJDEIYE9EAmR/view"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           Resume
         </a>
-      </button>
-      <button className="cursor-pointer text-xl p-1" onClick={toggleTheme}>
-        {theme === "dark" ? <GoSun /> : <IoMoonOutline />}
       </button>
     </>
   );
 
   return (
-    <div className="fixed top-[3%] left-[13%] w-9/12 z-50 opacity-90">
+    <div className="fixed top-[3%] left-[13%] z-50 w-[74%] md:w-[80%] sm:w-[94%]">
       <motion.div
-        key={theme}
         className="p-0.5 rounded-3xl w-full"
         style={{
           background:
@@ -66,21 +63,31 @@ const NavBar = () => {
         }}
         transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
       >
+        {/* Navbar core */}
         <div
           className={`flex items-center justify-between px-4 py-3 rounded-3xl ${
-            theme === "dark"
-              ? "bg-[#121212] text-[#F9F6EE]"
-              : "bg-[#F9F6EE] text-[#555555]"
+            theme === "dark" ? "bg-[#121212] text-[#F9F6EE]" : "bg-[#F9F6EE] text-[#555555]"
           }`}
         >
-          <div className="text-lg">{`< vanshSingh />`}</div>
+          {/* Logo */}
+          <div className="text-lg font-semibold">
+            <span className="hidden lg:inline">{`< vanshSingh />`}</span>
+            <span className="inline lg:hidden">{`< vs />`}</span>
+          </div>
 
           {/* Large screen menu */}
           <div className="hidden lg:flex gap-8">{navItems}</div>
 
-          {/* Mobile menu toggle */}
-          <div className="lg:hidden">
-            <button onClick={() => setMenuOpen(!menuOpen)} className="text-2xl">
+          {/* Right side: hamburger + theme toggle on mobile */}
+          <div className="flex items-center gap-4 lg:gap-6">
+            <button className="text-xl" onClick={toggleTheme}>
+              {theme === "dark" ? <GoSun /> : <IoMoonOutline />}
+            </button>
+            <button
+              onClick={() => setMenuOpen(!menuOpen)}
+              className="text-2xl lg:hidden"
+              aria-label="Toggle Menu"
+            >
               {menuOpen ? <FiX /> : <FiMenu />}
             </button>
           </div>
@@ -89,11 +96,9 @@ const NavBar = () => {
         {/* Mobile dropdown menu */}
         {menuOpen && (
           <div
-            className={`flex flex-col gap-4 py-4 items-center rounded-b-3xl ${
-              theme === "dark"
-                ? "bg-[#121212] text-[#F9F6EE]"
-                : "bg-[#F9F6EE] text-[#555555]"
-            } lg:hidden`}
+            className={`flex flex-col gap-4 py-4 items-center rounded-b-3xl lg:hidden ${
+              theme === "dark" ? "bg-[#121212] text-[#F9F6EE]" : "bg-[#F9F6EE] text-[#555555]"
+            }`}
           >
             {navItems}
           </div>

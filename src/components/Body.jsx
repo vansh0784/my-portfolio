@@ -12,6 +12,7 @@ import { motion, useScroll, useSpring } from "framer-motion";
 const Body = () => {
   const { theme } = useContext(ThemeContext);
   const scrollRef = useRef(null);
+
   const { scrollYProgress } = useScroll({
     container: scrollRef,
   });
@@ -24,9 +25,21 @@ const Body = () => {
 
   return (
     <div className="flex h-screen bg-white dark:bg-black text-black dark:text-[#F9F6EE]" id={theme}>
+      {/* Top Scroll Indicator — Mobile/Tablet Only */}
+      <motion.div
+        className={`fixed top-0 left-0 w-full h-[5px] z-50 sm:hidden ${
+          theme === "dark" ? "bg-gray-700" : "bg-gray-300"
+        }`}
+      >
+        <motion.div
+          className="h-full bg-orange-500 origin-left"
+          style={{ scaleX: scaleY }}
+        />
+      </motion.div>
+
       <NavBar />
 
-      {/* Socials (Left Sidebar) — Hide on mobile */}
+      {/* Social Icons — Left Sidebar (hidden on mobile) */}
       <div className="hidden sm:flex w-1/12 h-full fixed left-0 top-0 flex-col justify-end items-center gap-8 cursor-pointer text-xl">
         <a href="https://wa.me/917428716307" className="px-2 py-1">
           <BsWhatsapp />
@@ -53,11 +66,12 @@ const Body = () => {
           <Contact />
         </div>
 
-        {/* Scroll Indicator (Right of content) */}
+        {/* Desktop Scroll Indicator — Right Vertical */}
         <motion.div
-          className={`w-[0.6em] fixed h-[8em] top-[50%] right-[8%] rounded-xl overflow-hidden ${
-            theme === "dark" ? "bg-gray-700" : "bg-gray-300"
-          }`}
+          className={`w-[0.6em] h-[8em] fixed top-[50%] right-[8%] rounded-xl overflow-hidden
+                      hidden sm:block ${
+                        theme === "dark" ? "bg-gray-700" : "bg-gray-300"
+                      }`}
         >
           <motion.div
             className="w-full h-full bg-orange-500 rounded-2xl origin-top"
@@ -66,7 +80,7 @@ const Body = () => {
         </motion.div>
       </div>
 
-      {/* Email (Right Sidebar) — Hide on mobile */}
+      {/* Email — Right Sidebar (hidden on mobile) */}
       <div className="hidden sm:flex w-1/12 h-full flex-col justify-end items-center fixed right-0 top-0 gap-8">
         <a href="mailto:vanshsin784@gmail.com" className="rotate-90 mb-16">
           <p>vanshsin784@gmail.com</p>

@@ -15,16 +15,16 @@ const About = () => {
           This is me
         </p>
 
-        <div className="flex flex-col items-center justify-center gap-6 p-4 border-dotted border-t-2 w-full max-w-6xl">
-          {/* Image at top */}
+        <div className="flex flex-col md:flex-row-reverse items-center justify-center gap-6 p-4 border-dotted border-t-2 w-full max-w-6xl">
+          {/* Image Section */}
           <img
             src={user1}
             alt="Vansh Singh"
-            className="rounded-full w-60 sm:w-72 md:w-80 p-4"
+            className="rounded-full w-60 sm:w-72 md:w-80 p-4 md:p-6"
           />
 
           {/* Text Section */}
-          <div className="w-full">
+          <div className="w-full md:w-2/3">
             <p
               className={`font-semibold text-base sm:text-md text-justify ${
                 theme === "dark" ? "text-[#F9F6EE]" : "text-[#555555]"

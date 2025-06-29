@@ -13,7 +13,7 @@ const Hero = () => {
 
   return (
     <>
-      <div className="flex flex-col items-center justify-center w-full px-4 sm:px-8 md:px-12 lg:px-24 py-8">
+      <div className="flex flex-col items-start justify-start w-full px-4 sm:px-8 md:px-12 py-8">
         <div className="w-full max-w-5xl flex flex-col items-start">
           <div className="p-6 rounded-lg w-full">
             <h3
@@ -73,8 +73,6 @@ const Hero = () => {
           </div>
         </div>
       </div>
-
-      {/* Other Sections */}
       <About />
       <Skills />
       <Projects />

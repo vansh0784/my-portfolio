@@ -25,7 +25,7 @@ const Projects = () => {
   );
 
   const bgColor = theme === "dark" ? "bg-[#121212]" : "bg-[#F9F6EE]";
-  const textColor = theme === "dark" ? "text-[#F9F6EE]" : "text-[#121212]";
+  const textColor = theme === "dark" ? "text-[#F9F6EE]" : "text-[#333333]";
   const borderColor = theme === "dark" ? "border-[#333333]" : "border-[#d6d6d6]";
 
   return (
