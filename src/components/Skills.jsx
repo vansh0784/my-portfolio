@@ -19,7 +19,6 @@ import { motion } from 'framer-motion'
 import { BsFlower3 } from 'react-icons/bs'
 import { ThemeContext } from '../context/ThemeContext';
 
-
 const fadeInVariants = {
   hidden: { opacity: 0, y: 50 },
   visible: (i) => ({
@@ -29,11 +28,8 @@ const fadeInVariants = {
   })
 };
 
-// top: same imports
-
 const Skills = () => {
   const { theme } = useContext(ThemeContext);
-
   const textColor = theme === "dark" ? "text-[#F9F6EE]" : "text-[#333333]";
 
   return (
@@ -53,8 +49,6 @@ const Skills = () => {
 
       {/* Skill Categories */}
       <div className="flex flex-col gap-12 w-full px-4 py-2">
-
-        {/* Each section */}
         {[
           {
             title: "FRONTEND",
@@ -96,7 +90,7 @@ const Skills = () => {
             ],
             custom: 4,
           },
-        ].map((section, idx) => (
+        ].map((section) => (
           <motion.div
             key={section.title}
             variants={fadeInVariants}
@@ -104,14 +98,17 @@ const Skills = () => {
             whileInView="visible"
             viewport={{ once: false }}
             custom={section.custom}
-            className="flex flex-col w-full gap-6"
+            className="flex flex-col lg:flex-row items-center lg:items-start justify-between w-full gap-6"
           >
-            <h1 className={`text-3xl font-bold ${textColor}`}>{section.title}</h1>
-            <div className="flex flex-wrap gap-6 items-center justify-start sm:justify-center">
+            {/* Title Left Side (on Desktop) */}
+            <h1 className={`text-3xl w-2/4 font-bold ${textColor} lg:w-1/4`}>{section.title}</h1>
+
+            {/* Skills Right Side (on Desktop) */}
+            <div className="flex flex-wrap gap-6 items-center justify-end lg:w-2/4">
               {section.items.map((skill, i) => (
-                <div key={i} className="flex flex-col items-center justify-center gap-1">
-                  <img src={skill.icon} alt={skill.name} className="w-12 sm:w-14" />
-                  <p className={`text-md font-semibold ${textColor}`}>{skill.name}</p>
+                <div key={i} className="flex sm:flex-col items-start justify-start  gap-1">
+                  <img src={skill.icon} alt={skill.name} className="w-8 sm:w-12 " />
+                  <p className={`text-md sm:text-sm md:text-sm font-semibold ${textColor}`}>{skill.name}</p>
                 </div>
               ))}
             </div>

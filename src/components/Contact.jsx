@@ -39,7 +39,10 @@ const Contact = () => {
         >
           Contact me
         </p>
-        <div className="flex flex-col lg:flex-row lg:justify-evenly items-start gap-10 mt-6 w-full">
+
+        {/* Main flex wrapper */}
+        <div className="flex flex-col lg:flex-row items-center lg:items-start gap-10 mt-6 w-full">
+          {/* Left Side Text */}
           <div className="flex flex-col gap-4 w-full lg:w-1/2">
             <p className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent text-2xl sm:text-3xl font-extrabold">
               No need to hesitate, just initiate!
@@ -54,11 +57,13 @@ const Contact = () => {
               mind, or just want to say hello, feel free to reach out!
             </p>
           </div>
+
+          {/* Right Side Form */}
           <form
             onSubmit={handleSubmit}
-            className="flex flex-col gap-6 w-full lg:w-1/2  lg:justify-center"
+            className="flex flex-col gap-6 w-full lg:w-1/2 justify-center"
           >
-            <label>
+            <label className="text-center">
               <input
                 type="text"
                 placeholder="Your name"
@@ -66,7 +71,7 @@ const Contact = () => {
                 required
               />
             </label>
-            <label>
+            <label className="text-center">
               <input
                 type="email"
                 placeholder="Your email"
@@ -74,7 +79,7 @@ const Contact = () => {
                 required
               />
             </label>
-            <label>
+            <label className="text-center">
               <textarea
                 placeholder="Type your message here"
                 rows={3}
@@ -85,18 +90,19 @@ const Contact = () => {
 
             <button
               type="submit"
-              className={`flex items-center justify-center w-3/4 gap-2 px-4 py-3 rounded-3xl font-semibold cursor-pointer transition-all
-              ${
-                theme === "dark"
-                  ? "bg-gray-700 text-[#F9F6EE] hover:bg-gray-600"
-                  : "bg-gray-900 text-[#F9F6EE] hover:bg-gray-800"
-              }`}
+              className={` ml-[13%] flex items-center justify-center w-3/4 gap-2 px-4 py-3 rounded-3xl font-semibold cursor-pointer transition-all
+        ${
+          theme === "dark"
+            ? "bg-gray-700 text-[#F9F6EE] hover:bg-gray-600"
+            : "bg-gray-900 text-[#F9F6EE] hover:bg-gray-800"
+        }`}
             >
               <span>Send</span> <FaTelegramPlane />
             </button>
           </form>
         </div>
       </div>
+
       <footer
         className={`border-t text-center flex flex-col items-center justify-center py-6 gap-4 mt-8
         ${

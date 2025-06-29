@@ -40,19 +40,15 @@ const About = () => {
               >
                 Vansh Singh
               </strong>
-              , a Software Developer and pre-final year B.Tech student. I
-              specialize in the MERN stack and have an intermediate
-              understanding of Data Structures and Algorithms, which helps me
-              build scalable and optimized solutions. My development journey
-              involves crafting full-stack applications with clean,
-              maintainable code and a focus on performance and usability. I
-              regularly sharpen my problem-solving skills through coding
-              challenges and keep expanding my knowledge by exploring system
-              design, backend architecture, and emerging technologies. I thrive
-              in collaborative environments, enjoy transforming ideas into
-              functional products, and am constantly driven by curiosity and
-              growth. My goal is to build impactful solutions and grow as a
-              developer with every project I take on.
+              , a final-year B.Tech student and passionate Software Developer. I
+              specialize in the MERN stack and have a solid foundation in Data
+              Structures and Algorithms, which helps me write scalable,
+              efficient code. I enjoy building full-stack applications that
+              focus on performance and user experience. My journey involves
+              constant learning—whether it’s system design, backend
+              architecture, or emerging tech. I thrive in collaborative
+              environments and take pride in transforming ideas into meaningful,
+              real-world solutions.
             </p>
 
             <div className="mt-4">
